@@ -1,0 +1,33 @@
+$primary: #03254e;
+$secondary: #545677;
+$tertiary: #eb9fef;
+$background: #e4e3d3;
+$text: white;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    font-family: "Roboto";
+    background-color: $background;
+}
+
+div {
+    margin: 10px;
+}
+
+.hover-parent > * {
+    cursor: pointer;
+    pointer-events: all;
+    transition: 300ms opacity, 300ms transform;
+}
+
+.hover-parent:hover > * {
+    opacity: 0.4;
+}
+
+.hover-parent:hover > *:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
